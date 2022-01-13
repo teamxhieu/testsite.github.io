@@ -3,6 +3,24 @@
     <title>Test</title>
   </head>
   <body>
-    <h1>test</h1>
+        <script>
+        var form = new FormData();
+        form.append("app_id", "100067");
+        form.append("login_id", "34534534543");
+
+        var settings = {
+          "url": "https://napthe.vn/api/auth/player_id_login",
+          "method": "POST",
+          "timeout": 0,
+          "processData": false,
+          "mimeType": "multipart/form-data",
+          "contentType": false,
+          "data": form
+        };
+
+        $.ajax(settings).done(function (response) {
+          console.log(response);
+        });
+    </script>
   </body>
 </html>
